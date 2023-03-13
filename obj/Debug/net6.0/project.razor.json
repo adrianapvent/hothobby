@@ -18379,8 +18379,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/_Register.cshtml",
+      "TargetPath": "Views\\User\\_Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/dashboard.cshtml",
+      "TargetPath": "Views\\Post\\dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18394,8 +18404,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/viewPost.cshtml",
+      "TargetPath": "Views\\Post\\viewPost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/_Login.cshtml",
+      "TargetPath": "Views\\User\\_Login.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18404,8 +18429,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/addPost.cshtml",
+      "TargetPath": "Views\\Post\\addPost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/userPost.cshtml",
+      "TargetPath": "Views\\Post\\userPost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/editPost.cshtml",
+      "TargetPath": "Views\\Post\\editPost.cshtml",
       "FileKind": "mvc"
     }
   ],

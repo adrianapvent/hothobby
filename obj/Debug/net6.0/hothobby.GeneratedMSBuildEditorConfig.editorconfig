@@ -23,12 +23,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/addPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9hZGRQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9kYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/editPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9lZGl0UG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/userPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC91c2VyUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Post/viewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC92aWV3UG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9fTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/User/_Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9fUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/Adriana.Pena/codingDojo/soloProject1/hothobby/Views/_ViewImports.cshtml]

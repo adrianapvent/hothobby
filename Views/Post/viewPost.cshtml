@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "View a Post";
+}
+@model Post
+<h5 class="text-end"><a href="/logout"> Log Out </a></h5>
+<div class="text-center">
+    <h1 class="display-4">@Model.Title</h1>
+    <nav class="nav align-items-center justify-content-around">
+        <a href="/post/dashboard">Home</a>
+        <a href="/post/createPost">Add Post</a>
+        <a href="/post/@Model.PostId/editPost">Edit</a>
+        @* <a href="/editDish">Edit Dish</a>
+        <a href="/Delete">Delete Dish</a> *@
+    </nav>
+</div>
+<div class="card shadow rounded mx-auto w-75 mb-3 row">
+    <h1 class="card-title text-center bg-dark text-light py-2 rounded-top"><a href="/post/@Model.PostId/viewPost">@Model.Title</a></h1>
+    <h2>@Model.Img</h2>
+    <h3>@Model.Creator</h3>
+
+    
+    <button class="btn text-light"><a href="/Post/@Model.PostId/editPost">Edit</a></button>
+    <br>
+    <button class="btn text-light"><a href="/Post/@Model.PostId/Delete">Delete</a></button>
+    
+</div>

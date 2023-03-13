@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Edit Page";
+}
+@model Post
+<div class="container w-75 mx-auto">
+    <h1 class="text-center">EditPost</h1>
+    <form class="shadow p-3 rounded" action="/post/@Model.PostId/updatePost" method="post">
+        <section class="mb-3">
+            <label for="Img">Link to Hobby Image</label>
+            <input type="text" name="Img" id="" value="@Model.Img">
+            <span asp-validation-for="Img"></span>
+        </section>
+        <section class="mb-3">
+            <label for="Title">Title</label>
+            <input type="text" name="Title" id="" value="@Model.Title">
+            <span asp-validation-for="Title"></span>
+        </section>
+        <button class="btn btn-success">Update Post</button>
+    </form>
+</div>

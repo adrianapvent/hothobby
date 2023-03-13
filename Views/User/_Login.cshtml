@@ -1,0 +1,17 @@
+@model LoginUser
+<div class="column">
+    <h2 class="text-center">Login</h2>
+    <form action="/login" method="post">
+        <section class="mb-3">
+            <label for="LoginEmail">Email</label>
+            <input class="form-control" type="email" name="LoginEmail" id="">
+            <span asp-validation-for="LoginEmail"></span>
+        </section>
+        <section class="mb-3">
+            <label for="LoginPassword">Password</label>
+            <input class="form-control" asp-for="LoginPassword">
+            <span asp-validation-for="LoginPassword"></span>
+        </section>
+        <button class="btn btn-success">Login</button>
+    </form>
+</div>
