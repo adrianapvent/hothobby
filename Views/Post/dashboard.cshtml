@@ -13,7 +13,7 @@
         <a href="/post/createPost">Add Post</a>
     </nav>
 
-@* @foreach(Post p in Model) {
+@foreach(Post p in Model) {
     <div class="card shadow rounded mx-auto w-75 mb-3 row">
         <div class="column">
             <h3 class="card-title text-center bg-dark text-light py-2 rounded-top"><a href="/post/@p.PostId/view">@p.Title</a></h3>
@@ -24,4 +24,4 @@
             <p>@p.Creator</p>
         </div>
     </div>
-} *@
+}
