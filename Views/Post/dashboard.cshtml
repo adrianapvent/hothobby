@@ -3,25 +3,27 @@
 }
 @model List<Post>
 
-<link rel="stylesheet" type="text/css" href="/ArtStagram/wwwroot/css/style.less">
 <h3 class="text-center">Hi, @Context.Session.GetString("name")</h3>
 <h5 class="text-end"><a href="/logout"> Log Out </a></h5>
 <h1 class="text-center">HotHobby Feed</h1>
 <p class="text-center">Check out User's Favorite Hobbies!</p>
     <nav class="nav align-items-center justify-content-around">
         <a href="/">Home</a>
-        <a href="/post/createPost">Add Post</a>
+        <a href="/post/addPost">Add Post</a>
     </nav>
 
 @foreach(Post p in Model) {
     <div class="card shadow rounded mx-auto w-75 mb-3 row">
         <div class="column">
             <h3 class="card-title text-center bg-dark text-light py-2 rounded-top"><a href="/post/@p.PostId/view">@p.Title</a></h3>
-            <p class="col-lg">@p.Img</p>
-            <p>@p.CreatedAt</p>
+                <div class="text-center">
+                    <img src="@p.Img" class="rounded mx-auto d-block" alt="@p.Title">
+                    <h2>@p.Content</h2>
+                </div>
+            <p class="text-center">@p.CreatedAt</p>
         </div>
         <div>
-            <p>@p.Creator</p>
+            <p class="blockquote text-center">@p.Creator</p>
         </div>
     </div>
 }

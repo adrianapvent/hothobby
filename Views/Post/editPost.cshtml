@@ -15,6 +15,11 @@
             <input type="text" name="Title" id="" value="@Model.Title">
             <span asp-validation-for="Title"></span>
         </section>
+        <section class="mb-3">
+        <label for="Content">Post Content</label>
+        <textarea name="Content" id="" cols="30" rows="10"></textarea>
+        <span asp-validation-for="Content"></span>
+        </section>
         <button class="btn btn-success">Update Post</button>
     </form>
 </div>

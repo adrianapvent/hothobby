@@ -39,8 +39,8 @@ public class UniqueEmailAttribute : ValidationAttribute
         { // if email input is empty
             return new ValidationResult("Email is required");
         }
-        MyContext _context = (MyContext)valContext.GetService(typeof(MyContext));
-        if (_context.Users.Any(e => e.Email == value.ToString()))
+        MyContext db = (MyContext)valContext.GetService(typeof(MyContext));
+        if (db.Users.Any(e => e.Email == value.ToString()))
         {
             return new ValidationResult("Email is in use"); // if email is in database
         }

@@ -8,15 +8,21 @@
     <nav class="nav align-items-center justify-content-around">
         <a href="/post/dashboard">Home</a>
         <a href="/post/createPost">Add Post</a>
-        <a href="/post/@Model.PostId/editPost">Edit</a>
-        @* <a href="/editDish">Edit Dish</a>
-        <a href="/Delete">Delete Dish</a> *@
+        <div class="column">
+            @if(@Model.UserId == @Context.Session.GetInt32("uid")) {
+                <a href="/post/@Model.PostId/editPost">Edit</a>
+                <a href="/post/@Model.PostId/Delete">Delete</a>
+            }
+        </div>
     </nav>
 </div>
 <div class="card shadow rounded mx-auto w-75 mb-3 row">
     <h1 class="card-title text-center bg-dark text-light py-2 rounded-top"><a href="/post/@Model.PostId/viewPost">@Model.Title</a></h1>
-    <h2>@Model.Img</h2>
-    <h3>@Model.Creator</h3>
+    <img src="@Model.Img" alt="@Model.Title">
+    <p>
+    Description of Hobby:
+    @Model.Content
+    </p>
 
     
     <button class="btn text-light"><a href="/Post/@Model.PostId/editPost">Edit</a></button>
