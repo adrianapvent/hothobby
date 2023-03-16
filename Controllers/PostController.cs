@@ -31,6 +31,7 @@ public class PostController : Controller
 
         List<Post> allPosts = db.Posts
         .Include(p => p.Creator)
+        .Include(p => p.Hobbyist)
         .OrderByDescending(p => p.CreatedAt)
         .ToList();
         return View("Dashboard", allPosts);
@@ -90,6 +91,8 @@ public class PostController : Controller
             return View("editPost", item);
         }
     }
+
+    [SessionCheck]
     [HttpPost("/post/{postId}/updatePost")]
     public IActionResult UpdatePost(Post p, int postId)
     {
@@ -121,6 +124,8 @@ public class PostController : Controller
         }
 
     }
+
+    [SessionCheck]
     [HttpGet("/post/{postId}/delete")]
     public IActionResult DeletePost(int postId)
     {
@@ -131,5 +136,28 @@ public class PostController : Controller
             db.SaveChanges();
         }
         return RedirectToAction("Dashboard");
+    }
+
+    [SessionCheck]
+    [HttpPost("posts/{id}/signup")]
+    public IActionResult Signup(int id)
+    {
+        UserPostSignup? existingSignUp = db.UserPostSignups.FirstOrDefault(uvs => uvs.UserId == HttpContext.Session.GetInt32("uid") && uvs.PostId == id);
+
+        if (existingSignUp == null)
+        {
+            UserPostSignup newSignup = new UserPostSignup()
+            {
+                UserId = (int)HttpContext.Session.GetInt32("uid"),
+                PostId = id
+            };
+            db.UserPostSignups.Add(newSignup);
+        }
+        else
+        {
+            db.UserPostSignups.Remove(existingSignUp);
+        }
+        db.SaveChanges();
+        return RedirectToAction("dashboard");
     }
 }

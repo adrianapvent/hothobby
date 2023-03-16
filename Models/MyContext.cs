@@ -9,6 +9,6 @@ public class MyContext : DbContext
 
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
-    public DbSet<Hobby> Hobbys { get; set; }
+    public DbSet<UserPostSignup> UserPostSignups { get; set; }
 
 }

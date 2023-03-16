@@ -2,21 +2,21 @@
     ViewData["Title"] = "Edit Page";
 }
 @model Post
-<div class="container w-75 mx-auto">
-    <h1 class="text-center">EditPost</h1>
-    <form class="shadow p-3 rounded" action="/post/@Model.PostId/updatePost" method="post">
+<div class="container-fluid container w-75 mx-auto">
+    <h1 class="text-center shadow p-3">EditPost</h1>
+    <form class="list-group col text-center shadow p-3 rounded" action="/post/@Model.PostId/updatePost" method="post">
         <section class="mb-3">
-            <label for="Img">Link to Hobby Image</label>
+            <label for="Img" class="col-sm-2 col-form-label">Link to Hobby Image</label>
             <input type="text" name="Img" id="" value="@Model.Img">
             <span asp-validation-for="Img"></span>
         </section>
         <section class="mb-3">
-            <label for="Title">Title</label>
+            <label for="Title" class="col-sm-2 col-form-label">Title</label>
             <input type="text" name="Title" id="" value="@Model.Title">
             <span asp-validation-for="Title"></span>
         </section>
         <section class="mb-3">
-        <label for="Content">Post Content</label>
+        <label for="Content" class="col-sm-2 col-form-label">Post Content</label>
         <textarea name="Content" id="" cols="30" rows="10"></textarea>
         <span asp-validation-for="Content"></span>
         </section>

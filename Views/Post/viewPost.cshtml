@@ -3,7 +3,7 @@
 }
 @model Post
 <h5 class="text-end"><a href="/logout"> Log Out </a></h5>
-<div class="text-center">
+<div class="card shadow rounded mx-auto w-75 mb-3 row text-center">
     <h1 class="display-4">@Model.Title</h1>
     <nav class="nav align-items-center justify-content-around">
         <a href="/post/dashboard">Home</a>
@@ -22,11 +22,32 @@
     <p>
     Description of Hobby:
     @Model.Content
+    </p><br>
+    <p>
+    Posted By: @Model.Creator.Name
     </p>
 
-    
     <button class="btn text-light"><a href="/Post/@Model.PostId/editPost">Edit</a></button>
     <br>
     <button class="btn text-light"><a href="/Post/@Model.PostId/Delete">Delete</a></button>
+
+    @* <div> *@
+    @{ bool existingSignup = Post.Hobbys.Any(post => post.UserPostSignupId == Context.Session.GetInt32("uid"));}
     
+        <form asp-controller="Post" 
+                asp-action="Signup" 
+                asp-route-id="@Post.PostId">
+        
+        <button>
+        @if (alreadySignedup)
+        {
+            <span>Remove Signup</span>
+        }
+        else
+        {
+            <span>Signup</span>
+        }
+        </button>
+        </form>
+    @* </div> *@
 </div>

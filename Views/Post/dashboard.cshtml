@@ -23,7 +23,10 @@
             <p class="text-center">@p.CreatedAt</p>
         </div>
         <div>
-            <p class="blockquote text-center">@p.Creator</p>
+            <p class="blockquote text-center">Posted by: @p.Creator.Name</p>
+        </div>
+        <div>
+            <button class="btn text-light"><a href="/Post/{id}/signup">Delete</a></button>
         </div>
     </div>
 }

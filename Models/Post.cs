@@ -23,4 +23,6 @@ public class Post
 
     public int UserId { get; set; }
     public User? Creator { get; set; }
+
+    public List<UserPostSignup> Hobbyist { get; set; } = new List<UserPostSignup>();
 }

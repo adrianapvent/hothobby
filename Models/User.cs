@@ -30,6 +30,9 @@ public class User
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
     public List<Post> CreatorPost { get; set; } = new List<Post>();
+
+    public List<UserPostSignup> Hobbys { get; set; } = new List<UserPostSignup>();
+
 }
 public class UniqueEmailAttribute : ValidationAttribute
 {
