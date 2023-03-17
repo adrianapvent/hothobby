@@ -7,7 +7,7 @@
     <h1 class="display-4">@Model.Title</h1>
     <nav class="nav align-items-center justify-content-around">
         <a href="/post/dashboard">Home</a>
-        <a href="/post/createPost">Add Post</a>
+        <a href="/post/addPost">Add Post</a>
         <div class="column">
             @if(@Model.UserId == @Context.Session.GetInt32("uid")) {
                 <a href="/post/@Model.PostId/editPost">Edit</a>
