@@ -26,7 +26,24 @@
             <p class="blockquote text-center">Posted by: @p.Creator.Name</p>
         </div>
         <div>
-            <button class="btn text-light"><a href="/Post/{id}/signup">Delete</a></button>
+        @{ bool existingSignup = @p.Hobbyist.Any(userPost => userPost.UserId == @Context.Session.GetInt32("uid"));}
+    
+        <form asp-controller="Post" 
+                asp-action="Signup" 
+                asp-route-id="@p.PostId">
+        
+        <button>
+        @if (existingSignup)
+        {
+            <span>Remove Signup</span>
+        }
+        else
+        {
+            <span>Signup</span>
+        }
+    
+        </button>
+        </form>
         </div>
     </div>
 }

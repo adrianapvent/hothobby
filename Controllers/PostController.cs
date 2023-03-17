@@ -42,6 +42,7 @@ public class PostController : Controller
     {
         Post? p = db.Posts
         .Include(p => p.Creator)
+        .Include(p => p.Hobbyist)
         .FirstOrDefault(p => p.PostId == postId);
         if (p == null)
         {
@@ -139,7 +140,7 @@ public class PostController : Controller
     }
 
     [SessionCheck]
-    [HttpPost("posts/{id}/signup")]
+    [HttpPost("Post/{id}/Signup")]
     public IActionResult Signup(int id)
     {
         UserPostSignup? existingSignUp = db.UserPostSignups.FirstOrDefault(uvs => uvs.UserId == HttpContext.Session.GetInt32("uid") && uvs.PostId == id);

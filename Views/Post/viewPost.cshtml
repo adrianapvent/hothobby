@@ -30,16 +30,15 @@
     <button class="btn text-light"><a href="/Post/@Model.PostId/editPost">Edit</a></button>
     <br>
     <button class="btn text-light"><a href="/Post/@Model.PostId/Delete">Delete</a></button>
-
-    @* <div> *@
-    @{ bool existingSignup = Post.Hobbys.Any(post => post.UserPostSignupId == Context.Session.GetInt32("uid"));}
+    
+    @{ bool existingSignup = @Model.Hobbyist.Any(userPost => userPost.UserId == @Context.Session.GetInt32("uid"));}
     
         <form asp-controller="Post" 
                 asp-action="Signup" 
-                asp-route-id="@Post.PostId">
+                asp-route-id="@Model.PostId">
         
         <button>
-        @if (alreadySignedup)
+        @if (existingSignup)
         {
             <span>Remove Signup</span>
         }
@@ -47,7 +46,8 @@
         {
             <span>Signup</span>
         }
+    
         </button>
         </form>
-    @* </div> *@
+
 </div>
